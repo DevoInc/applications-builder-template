@@ -1,0 +1,305 @@
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+<div class="lt-vapp theme-light collapsible">
+
+  <header class="lt-vapp-tv-header">
+    <h1 class="lt-vapp-company_logo"></h1>
+    <h2  class="lt-vapp-application_name">Name of the application</h2>
+    <span>&nbsp;/&nbsp;</span>
+    <h3 class="lt-vapp-application_tab">Name of the current Tab</h3>
+    <span>&nbsp;/&nbsp;</span>
+    <h4 class="lt-vapp-application_section">Name of the current Section</h4>
+    <p class="timeDetail">
+      <span class="appsettingsfromId">FROM:</span> <span id="calfrom"></span>
+      <span class="appsettingstoId">TO:</span> <span id="calto"></span>
+    </p>
+    <div class="lt-vapp-tv-close lticon-exit_close clickable"></div>
+  </header>
+
+  <header class="lt-vapp-header no-header">
+    <div class="lt-vapp-header-inner">
+      <h1 class="lt-vapp-company_logo"></h1>
+      <h2  class="lt-vapp-application_name">${ __("Application Name") }</h2>
+    </div>
+    <figure class="lt-vapp-logtrust-powered">
+      <figcaption> Powered by </figcaption>
+      <span class="lticon-logo_full"></span>
+    </figure>
+  </header>
+
+  <nav class="lt-vapp-menu">
+
+    <ul class="lt-vapp-menu-main">
+      <li main="main1">
+        <p class="lt-vapp-menu-item-name">
+          <i class="lticon-analytics_presentation_statistics_graph"></i>
+          <span>${__("TAB 1")}</span>
+        </p>
+        <nav class="lt-vapp-menu-scroll">
+          <p class="lt-vapp-menu-scroll-titles">
+            <strong>${__("Quick access")}</strong>
+            <span>${__("Scroll to one of the sections")}</span>
+          </p>
+          <ul>
+            <li section="section11">${__("Section 1")}</li>
+            <li section="section12">${__("Section 2")}</li>
+          </ul>
+        </nav>
+      </li>
+      <li main="main2">
+        <p class="lt-vapp-menu-item-name">
+          <i class="lticon-analytics_presentation_statistics_graph"></i>
+          <span>${__("TAB 2")}</span>
+        </p>
+        <nav class="lt-vapp-menu-scroll">
+          <p class="lt-vapp-menu-scroll-titles">
+            <strong>${__("Quick access")}</strong>
+            <span>${__("Scroll to one of the sections")}</span>
+          </p>
+          <ul>
+            <li section="section21">${__("Section 1")}</li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+
+    <ul class="lt-vapp-menu-preferences">
+      <li class="lt-vapp-tv-mode" title="TV Mode">
+        <span class="lticon-tv_televison_movie_news"></span>
+      </li>
+      <li class="lt-vapp-capture-button" title="Capture app">
+        <span class="lticon-polaroid_picture_image_photo"></span>
+      </li>
+      <li class="lt-vapp-options-button va-menu-trigger" title="General settings">
+        <span class="lticon-settings_gear_preferences"></span>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- lt-vapp-config -->
+  <!-- ===================================================================== -->
+
+  <nav class="lt-vapp-config closed">
+    <p class="lt-vapp-config-bar">
+      <i class="lt-vapp-config-close LtAppIcon-close2"></i>
+      <span>${__("Close")}</span>
+    </p>
+
+    <h4>
+      <i class="lticon-settings_gear_preferences"></i>
+      <span>${__("Settings")}</span>
+    </h4>
+
+    <div class="lt-vapp-config-form-wrapper">
+      <form class="lt-form under-label">
+        <div class="lt-form-column-wrapper">
+          <div class="lt-form-column">
+            <h3 class="lt-form-title">${__("Visual Settings")}</h3>
+            <fieldset class="lt-form-group">
+              <div class="lt-form-field">
+                <label>${__("Theme")}</label>
+                <select id="theme">
+                  <option value="theme-dark">${__("Dark")}</option>
+                  <option value="theme-light" >${__("Light")}</option>
+                </select>
+              </div>
+              <div class="lt-form-field">
+                <label>${__("Titles size")}</label>
+                <select id="titleSize">
+                  <option value="small-headers">${__("Small")}</option>
+                  <option value="" selected>${__("Normal")}</option>
+                  <option value="big-headers">${__("Big")}</option>
+                </select>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="lt-form-column">
+            <fieldset class="lt-form-group">
+              <div class="lt-form-field-inline">
+                <input type="checkbox" id="displayCompact">
+                <label for="displayCompact">
+                  ${__("Compact view")}
+                </label>
+              </div>
+
+              <div class="lt-form-field-inline">
+                <input type="checkbox" id="displayBordered">
+                <label for="displayBordered">
+                  ${__("Bordered sections titles")}
+                </label>
+              </div>
+
+              <div class="lt-form-field-inline">
+                <input type="checkbox" id="displayCollapsibles" checked>
+                <label for="displayCollapsibles">
+                  ${__("Collapsible sections & widgets")}
+                </label>
+              </div>
+
+              <div class="lt-form-field-inline">
+                <input type="checkbox" id="displayDescription" checked>
+                <label for="displayDescription">
+                  ${__("Show widgets descriptions")}
+                </label>
+              </div>
+
+              <div class="lt-form-field-inline">
+                <input type="checkbox" id="displayMenuWidgetsExpanded" checked>
+                <label for="displayMenuWidgetsExpanded">
+                  ${__("Widgets options always visible")}
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <h3 class="lt-form-title">${__("Advanced settings")}</h3>
+        <div class="lt-form-column-wrapper" id="date-range-picker"></div>
+
+      </form>
+    </div>
+
+    <div class="lt-vapp-config-footer">
+      <button class="lt-vapp-config-close grey">${__("CANCEL")}</button>
+      <button class="lt-vapp-config-update">${__("UPDATE")}</button>
+    </div>
+  </nav>
+
+  <!-- Main 1 -->
+  <!-- ===================================================================== -->
+  <main class="lt-vapp-main" id="main1">
+
+    <!-- Section 11 -->
+    <!-- =================================================================== -->
+    <section class="lt-vapp-section" id="section11">
+      <h3 class="lt-vapp-section-title">
+        <i class="lticon-analytics_presentation_statistics_graph"></i>
+        <span>${__("Section 1")}</span>
+        <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+      </h3>
+
+      <!-- WIDGET 11 -->
+      <article class="lt-vapp-widget md-12 lg-12 tv-12" id="stackedBarWidget">
+        <header class="lt-vapp-widget-header">
+          <h3>${__("Widget 1")}</h3>
+          <nav class="lt-vapp-widget-options">
+            <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+            <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold">
+              <ul>
+                <li class="lt-vapp-widget-action-capture">
+                  <i class="lticon-polaroid_picture_image_photo"></i>
+                  <span>${__("Screenshot")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-download">
+                  <i class="lticon-computer_laptop_download"></i>
+                  <span>${__("Download data")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-zoom">
+                  <i class="lticon-zoom_in"></i>
+                  <span>${__("Zoom")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-gotosearch">
+                  <i class="lticon-search_find_zoom2"></i>
+                  <span>${__("Go to query")}</span>
+                </li>
+              </ul>
+            </span>
+          </nav>
+        </header>
+        <div class="lt-vapp-widget-graphic inner-padding"></div>
+      </article>
+    </section>
+
+    <!-- Section 12 -->
+    <!-- =================================================================== -->
+
+    <section class="lt-vapp-section" id="section12">
+      <h3 class="lt-vapp-section-title">
+        <i class="lticon-analytics_presentation_statistics_graph"></i>
+        <span>${__("Section 2")}</span>
+        <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+      </h3>
+
+      <article class="lt-vapp-widget md-12 lg-12 tv-12" id="voronoiWidget">
+        <header class="lt-vapp-widget-header">
+          <h3>${__("Widget 2")}</h3>
+          <nav class="lt-vapp-widget-options">
+            <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+            <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold">
+              <ul>
+                <li class="lt-vapp-widget-action-capture">
+                  <i class="lticon-polaroid_picture_image_photo"></i>
+                  <span>${__("Screenshot")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-download">
+                  <i class="lticon-computer_laptop_download"></i>
+                  <span>${__("Download data")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-zoom">
+                  <i class="lticon-zoom_in"></i>
+                  <span>${__("Zoom")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-gotosearch">
+                  <i class="lticon-search_find_zoom2"></i>
+                  <span>${__("Go to query")}</span>
+                </li>
+              </ul>
+            </span>
+          </nav>
+        </header>
+        <div class="lt-vapp-widget-graphic inner-padding"></div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Main 2 -->
+  <!-- ===================================================================== -->
+  <main class="lt-vapp-main" id="main2">
+
+    <!-- Section 21 -->
+    <!-- =================================================================== -->
+    <section class="lt-vapp-section" id="section21">
+      <h3 class="lt-vapp-section-title">
+        <i class="lticon-analytics_presentation_statistics_graph"></i>
+        <span>${__("Section 1")}</span>
+        <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+      </h3>
+
+      <article class="lt-vapp-widget md-12 lg-12 tv-12" id="linesWidget">
+        <header class="lt-vapp-widget-header">
+          <h3>${__("Widget 1")}</h3>
+          <nav class="lt-vapp-widget-options">
+            <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+            <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold">
+              <ul>
+                <li class="lt-vapp-widget-action-capture">
+                  <i class="lticon-polaroid_picture_image_photo"></i>
+                  <span>${__("Screenshot")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-download">
+                  <i class="lticon-computer_laptop_download"></i>
+                  <span>${__("Download data")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-zoom">
+                  <i class="lticon-zoom_in"></i>
+                  <span>${__("Zoom")}</span>
+                </li>
+                <li class="lt-vapp-widget-action-gotosearch">
+                  <i class="lticon-search_find_zoom2"></i>
+                  <span>${__("Go to query")}</span>
+                </li>
+              </ul>
+            </span>
+          </nav>
+        </header>
+        <div class="lt-vapp-widget-graphic inner-padding"></div>
+      </article>
+
+    </section>
+  </main>
+
+  <div class="lt-vapp-overlay"></div>
+</div>
