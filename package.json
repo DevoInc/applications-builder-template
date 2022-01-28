@@ -11,8 +11,8 @@
     "@babel/plugin-proposal-optional-chaining": "^7.12.7"
   },
   "dependencies": {
-    "@devo/applications-builder": "^1.0.0",
-    "@devo/applications-data-library": "^1.0.0"
+    "@devo/applications-builder": "^1.0.1",
+    "@devo/applications-data-library": "^1.0.1"
   },
   "private": true,
   "author": "Devo (desa@devo.com)",
