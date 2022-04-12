@@ -1,10 +1,10 @@
-import Tab from '@devo/applications-builder/Tab';
-import Section from '@devo/applications-builder/Section';
+import Tab from '@devoinc/applications-builder/Tab';
+import Section from '@devoinc/applications-builder/Section';
 
-import stackedBarsWidget from '@devo/applications-builder/widgets/stackedBars';
-import voronoiWidget from '@devo/applications-builder/widgets/voronoi';
+import stackedBarsWidget from '@devoinc/applications-builder/widgets/stackedBars';
+import voronoiWidget from '@devoinc/applications-builder/widgets/voronoi';
 
-import requests from '@devo/applications-builder/data/requests';
+import requests from '@devoinc/applications-builder/data/requests';
 
 export default () => {
   // Tab

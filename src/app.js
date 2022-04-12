@@ -1,6 +1,6 @@
 import config from './config';
-import App from '@devo/applications-builder/App';
-import bootstrap from '@devo/applications-builder/bootstrap';
+import App from '@devoinc/applications-builder/App';
+import bootstrap from '@devoinc/applications-builder/bootstrap';
 
 // Languages
 // -----------------------------------------------------------------------------

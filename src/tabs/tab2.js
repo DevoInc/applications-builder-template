@@ -1,8 +1,8 @@
-import Tab from '@devo/applications-builder/Tab';
-import Section from '@devo/applications-builder/Section';
+import Tab from '@devoinc/applications-builder/Tab';
+import Section from '@devoinc/applications-builder/Section';
 
-import requests from '@devo/applications-builder/data/requests';
-import linesWidget from '@devo/applications-builder/widgets/lines';
+import requests from '@devoinc/applications-builder/data/requests';
+import linesWidget from '@devoinc/applications-builder/widgets/lines';
 
 export default () => {
   // Tab

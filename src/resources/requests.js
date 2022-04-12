@@ -1,6 +1,6 @@
-import RequestApi from '@devo/applications-data-library/requests/RequestApi';
-import requests from '@devo/applications-builder/data/requests';
-import dateRange from '@devo/applications-builder/utils/dateRange';
+import RequestApi from '@devoinc/applications-data-library/requests/RequestApi';
+import requests from '@devoinc/applications-builder/data/requests';
+import dateRange from '@devoinc/applications-builder/utils/dateRange';
 
 requests.add(
   'responseTimeOf1Hour',

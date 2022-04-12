@@ -1,1 +1,1 @@
-### Template code for developing ready-to-go vertical applications (vapps)
+### Template code for developing ready-to-go Devo applications

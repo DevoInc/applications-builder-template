@@ -1,6 +1,6 @@
 {
   "name": "appV",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Devo Vertical Application",
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -10,11 +10,11 @@
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.11.0"
   },
-  "dependencies": {
-    "@devo/applications-builder": "^1.0.4",
-    "@devo/applications-data-library": "^1.0.4"
-  },
   "private": true,
   "author": "Devo (desa@devo.com)",
-  "license": "DEVO"
+  "license": "DEVO",
+  "dependencies": {
+    "@devoinc/applications-builder": "^2.0.0",
+    "@devoinc/applications-data-library": "^2.0.1"
+  }
 }
